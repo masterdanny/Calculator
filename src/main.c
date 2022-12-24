@@ -9,8 +9,12 @@ int div(int, int);
 // main function definition
 int main()
 {
-    int a = 10, b = 5;
-    int result;
+    int a, b, result;
+    printf("Enter two numbers\n");
+    printf("Enter your first number: \n");
+    scanf("%d", &a);
+    printf("Enter your second number: \n");
+    scanf("%d", &b);
 
     result = add(a, b);
     printf("%d + %d = %d\n", a, b, result);
@@ -45,5 +49,13 @@ int mul(int a, int b)
 
 int div(int a, int b)
 {
-    return a / b;
+    if (b == 0)
+    {
+        printf("Error: division by zero\n");
+        return 0;
+    }
+    else
+    {
+        return a / b;
+    }
 }
